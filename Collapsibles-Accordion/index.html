@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Accordion</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="shortcut icon" href="./1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unlock&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container-box">
+<div class="accordion open-box">
+<p class="number-text">
+    01
+</p>
+<h1 class="text-answer"> What do you mean by hacking?</h1>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="chevron-icons">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+  </svg>
+</div>
+<div class="hidden-box pnl">
+<p>Hacking is the act of compromising digital devices and networks by 
+    gaining unauthorized access to an account or computer system.
+
+    Hackers fall into three general categories: black hat hackers,
+     white hat hackers, and gray hat hackers. Although hackers 
+     are often associated with exploiting vulnerabilities to
+    gain unauthorized access to computers, systems, or networks, 
+    not all hacking is malicious or illegal.
+</p>
+<ul class="list-text">
+    <li>
+        black hat hackers  
+    </li>
+    <li>
+        white hat hackers
+    </li>
+    <li>
+        gray hat hackers  
+    </li>
+</ul>
+</div>
+
+<script>
+    var openclick = document.getElementsByClassName("open-box");
+    var i;
+    for (i = 0; i < openclick.length; i++) {
+      openclick[i].addEventListener("click", function() {
+        this.classList.toggle("open-box");
+        var pnl = this.nextElementSibling;
+        if (pnl.style.display === "block") {
+          pnl.style.display = "none";
+        } else {
+          pnl.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+</div>    
+</body>
+</html>
